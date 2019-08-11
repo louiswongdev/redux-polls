@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { handleAddPoll } from '../actions/polls';
 
 class AddPoll extends Component {
   state = {
@@ -21,7 +23,8 @@ class AddPoll extends Component {
     e.preventDefault();
 
     console.log('Add poll: ', this.state);
-  }
+    this.props.dispatch(handleAddPoll(this.state));
+  };
 
   isDisabled = () => {
     const { question, a, b, c, d } = this.state;
@@ -76,7 +79,7 @@ class AddPoll extends Component {
           name="c"
           onChange={this.handleInputChange}
           className="input"
-          id="c" 
+          id="c"
           type="text"
         />
 
@@ -99,4 +102,4 @@ class AddPoll extends Component {
   }
 }
 
-export default AddPoll;
+export default connect()(AddPoll);

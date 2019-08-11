@@ -27,8 +27,14 @@ a {
 }
 
 .option:hover {
-  border: 2px solid #252525;
+  border: 1px solid green;
+  background: green;
+  color: white;
   cursor: pointer;
+}
+
+.option.chosen:hover {
+  border: 2px solid green; 
 }
 
 .chosen {

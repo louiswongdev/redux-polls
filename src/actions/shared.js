@@ -5,7 +5,7 @@ import { receivePolls } from './polls';
 import { receiveUsers } from './users';
 import { setAuthedUser } from './authUser';
 
-const AUTHED_ID = 'sarah_edo';
+const AUTHED_ID = 'sarah_smith';
 
 export function handleInitialDate() {
   return dispatch => {

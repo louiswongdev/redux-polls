@@ -21,7 +21,6 @@ export function handleAddPoll(poll) {
       author: authedUser
     })
       .then(poll => {
-        console.log('Poll obj: ', poll)
         dispatch(addPoll(poll));
       })
       .then(() => dispatch(hideLoading()));
